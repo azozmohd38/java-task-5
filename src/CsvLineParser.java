@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class CsvLineParser {
+
+    public static void main(String[] args) {
+
+        // Create Scanner object
+        Scanner input = new Scanner(System.in);
+
+        // Read CSV record
+        System.out.print("Enter record (Name, Age, City): ");
+        String record = input.nextLine();
+
+        // Split the record by commas
+        String[] fields = record.split(",");
+
+        // Validate the number of fields
+        if (fields.length != 3) {
+            System.out.println("Invalid record.");
+            input.close();
+            return;
+        }
+
+        // Trim each field
+        String name = fields[0].trim();
+        String ageText = fields[1].trim();
+        String city = fields[2].trim();
+
+        // Convert age to integer
+        int age;
+
+        try {
+            age = Integer.parseInt(ageText);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid record.");
+            input.close();
+            return;
+        }
+
+        // Classify the age
+        String ageGroup;
+
+        if (age < 18) {
+            ageGroup = "Minor";
+        } else if (age <= 64) {
+            ageGroup = "Adult";
+        } else {
+            ageGroup = "Senior";
+        }
+
+        // Display the results
+        System.out.println("\nName      : " + name);
+        System.out.println("Age       : " + age);
+        System.out.println("City      : " + city);
+        System.out.println("Age Group : " + ageGroup);
+
+        // Close Scanner
+        input.close();
+    }
+}
