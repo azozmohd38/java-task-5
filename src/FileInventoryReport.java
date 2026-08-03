@@ -2,126 +2,130 @@ public class FileInventoryReport {
     public static void main(String[] args) {
 
         // Store CSV file records
-        String[] fileRecords = {"photo.png,340", "report.pdf,120", "music.mp3,500", "program.java,80",
-                "notes.txt,50", "image.gif,200", "data.xyz,30", "wrongRecord"};
+        String[] records = {"photo.png,340", "app.java,8", "song.mp3,5200", "report.pdf,150",
+                "notes.txt,25", "script.py,30", "badrecord", "video.mp4,900", "image.jpg,-50"};
 
-        // Counters and totals
+        // Summary variables
+        int totalFiles = 0;
+        int totalSize = 0;
         int documentCount = 0;
         int imageCount = 0;
         int audioCount = 0;
         int codeCount = 0;
         int otherCount = 0;
 
-        int totalSize = 0;
-        int totalFiles = 0;
-
         String largestFile = "";
-        int largestSize = 0;
-
-        System.out.println("File Inventory Report");
-        System.out.println("-------------");
+        int largestSize = -1;
 
         // Process each record
-        for (String record : fileRecords) {
+        for (String record : records) {
 
-            // Split CSV record
+            // Split the CSV record
             String[] parts = record.split(",");
 
-            // Skip invalid records
+            // Check that the record has exactly two fields
             if (parts.length != 2) {
-                System.out.println("Skipping malformed record: " + record);
+                System.out.println("Invalid record skipped: " + record);
                 continue;
             }
 
+            // Read and trim values
             String fileName = parts[0].trim();
+            String sizeText = parts[1].trim();
+
             int fileSize;
 
-            // Convert size to number
+            // Convert size to integer
             try {
-                fileSize = Integer.parseInt(parts[1].trim());
+                fileSize = Integer.parseInt(sizeText);
             } catch (NumberFormatException e) {
-                System.out.println("Skipping invalid size: " + record);
+                System.out.println("Invalid size skipped: " + record);
+                continue;
+            }
+
+            // Reject negative file sizes
+            if (fileSize < 0) {
+                System.out.println("Negative file size skipped: " + record);
                 continue;
             }
 
             // Get file extension
-            String extension = "none";
+            String extension = "";
             int dotIndex = fileName.lastIndexOf('.');
 
             if (dotIndex != -1 && dotIndex < fileName.length() - 1) {
                 extension = fileName.substring(dotIndex + 1).toLowerCase();
             }
 
-            // Classify file type
-            String fileType;
+            // Classify the file
+            String type;
 
             switch (extension) {
-
                 case "txt":
                 case "pdf":
                 case "docx":
                 case "xlsx":
-                    fileType = "Document";
+                    type = "Document";
                     documentCount++;
                     break;
 
                 case "jpg":
                 case "png":
                 case "gif":
-                    fileType = "Image";
+                    type = "Image";
                     imageCount++;
                     break;
 
                 case "mp3":
                 case "wav":
-                    fileType = "Audio";
+                    type = "Audio";
                     audioCount++;
                     break;
 
                 case "java":
                 case "py":
                 case "js":
-                    fileType = "Code";
+                    type = "Code";
                     codeCount++;
                     break;
 
                 default:
-                    fileType = "Other";
+                    type = "Other";
                     otherCount++;
             }
 
-            // Add file size to total
-            totalSize += fileSize;
+            // Update totals
             totalFiles++;
+            totalSize += fileSize;
 
-            // Check largest file
+            // Update largest file
             if (fileSize > largestSize) {
                 largestSize = fileSize;
                 largestFile = fileName;
             }
 
-            // Print file information
-            System.out.println(
-                    "Name: " + fileName +
-                            ", Extension: " + extension +
-                            ", Type: " + fileType +
-                            ", Size: " + fileSize + " KB"
-            );
+            // Display file information
+            System.out.println("File Name : " + fileName);
+            System.out.println("Extension: " + extension);
+            System.out.println("Type     : " + type);
+            System.out.println("Size (KB): " + fileSize);
+            System.out.println("----------------------------");
         }
 
         // Print summary
-        System.out.println("\n========== Summary ==========");
-        System.out.println("Total Files: " + totalFiles);
-        System.out.println("Total Size: " + totalSize + " KB");
+        System.out.println("\n===== Inventory Summary =====");
+        System.out.println("Total Files      : " + totalFiles);
+        System.out.println("Total Size (KB)  : " + totalSize);
+        System.out.println("Documents        : " + documentCount);
+        System.out.println("Images           : " + imageCount);
+        System.out.println("Audio            : " + audioCount);
+        System.out.println("Code             : " + codeCount);
+        System.out.println("Other            : " + otherCount);
 
-        System.out.println("\nCategory Counts:");
-        System.out.println("Documents: " + documentCount);
-        System.out.println("Images: " + imageCount);
-        System.out.println("Audio: " + audioCount);
-        System.out.println("Code: " + codeCount);
-        System.out.println("Other: " + otherCount);
-
-        System.out.println("\nLargest File:");
-        System.out.println(largestFile + " (" + largestSize + " KB)");
+        if (largestSize >= 0) {
+            System.out.println("Largest File     : " + largestFile + " (" + largestSize + " KB)");
+        } else {
+            System.out.println("Largest File     : None");
+        }
     }
 }
