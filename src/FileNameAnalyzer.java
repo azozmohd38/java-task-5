@@ -64,6 +64,7 @@ public class FileNameAnalyzer {
         System.out.println("Base Name      : " + baseName);
         System.out.println("Extension      : " + extension.toLowerCase());
         System.out.println("Classification : " + classification);
+        System.out.println("Analysis completed.");
 
         input.close();
     }
