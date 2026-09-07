@@ -138,6 +138,8 @@ public class FileInventoryReport {
         System.out.println("Audio            : " + audioCount);
         System.out.println("Code             : " + codeCount);
         System.out.println("Other            : " + otherCount);
+        System.out.println("Classified Total : "
+                + (documentCount + imageCount + audioCount + codeCount + otherCount));
 
         if (largestSize >= 0) {
             System.out.println("Largest File     : " + largestFile + " (" + largestSize + " KB)");
