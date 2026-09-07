@@ -141,7 +141,7 @@ public class FileInventoryReport {
         System.out.println("Classified Total : "
                 + (documentCount + imageCount + audioCount + codeCount + otherCount));
 
-        if (largestSize >= 0) {
+        if (largestSize >= 0 && !largestFile.isEmpty()) {
             System.out.println("Largest File     : " + largestFile + " (" + largestSize + " KB)");
         } else {
             System.out.println("Largest File     : None");
