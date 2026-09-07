@@ -1,4 +1,5 @@
 public class FileInventoryReport {
+
     public static void main(String[] args) {
 
         // Store CSV file records
