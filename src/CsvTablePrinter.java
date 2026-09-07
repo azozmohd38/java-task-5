@@ -17,9 +17,13 @@ public class CsvTablePrinter {
         // Get header columns
         String[] header = csvRows.get(0).split(",", -1);
 
+        String firstHeader = header[0].trim();
+        String secondHeader = header[1].trim();
+        String thirdHeader = header[2].trim();
+
         // Print table header
         System.out.printf("%-15s %-10s %-15s%n",
-                header[0], header[1], header[2]);
+                firstHeader, secondHeader, thirdHeader);
 
         // Print separator line
         for (int i = 0; i < 40; i++) {
