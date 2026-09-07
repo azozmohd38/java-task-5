@@ -50,6 +50,12 @@ public class CsvLineParser {
             return;
         }
 
+        if (age < 0) {
+            System.out.println("Invalid record.");
+            input.close();
+            return;
+        }
+
         // Classify the age
         String ageGroup;
 
