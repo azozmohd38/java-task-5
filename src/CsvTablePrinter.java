@@ -58,5 +58,6 @@ public class CsvTablePrinter {
 
         // Display total rows
         System.out.println("\nRows Shown: " + rowsShown);
+        System.out.println("Rows Skipped: " + (csvRows.size() - 1 - rowsShown));
     }
 }
