@@ -21,7 +21,7 @@ public class FilePathSplitter {
         boolean hasBackslash = originalPath.contains("\\");
 
         // Replace backslashes with forward slashes
-        String normalizedPath = originalPath.replace('\\', '/');
+        String normalizedPath = originalPath.replace('\\', '/').trim();
 
         // Find the last slash
         int lastSlash = normalizedPath.lastIndexOf('/');
