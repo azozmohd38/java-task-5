@@ -37,6 +37,12 @@ public class FilePathSplitter {
             fileName = normalizedPath.substring(lastSlash + 1).trim();
         }
 
+        if (fileName.isEmpty()) {
+            System.out.println("Invalid path.");
+            input.close();
+            return;
+        }
+
         // Get the file extension
         String extension;
         int lastDot = fileName.lastIndexOf('.');
