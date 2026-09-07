@@ -4,7 +4,6 @@ public class FilePathSplitter {
 
     public static void main(String[] args) {
 
-        // Create Scanner object
         Scanner input = new Scanner(System.in);
 
         // Read the full file path
