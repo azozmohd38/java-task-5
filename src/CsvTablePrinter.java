@@ -47,14 +47,12 @@ public class CsvTablePrinter {
             String age = data[1].trim();
             String city = data[2].trim();
 
-            // Print row in formatted columns
-            System.out.printf("%-15s %-10s %-15s%n", name, age, city);
-
             if (name.isEmpty() || age.isEmpty() || city.isEmpty()) {
                 System.out.println("Skipping malformed row: " + row);
                 continue;
             }
 
+            System.out.printf("%-15s %-10s %-15s%n", name, age, city);
             rowsShown++;
         }
 
