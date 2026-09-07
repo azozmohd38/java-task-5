@@ -125,6 +125,7 @@ public class FileInventoryReport {
             System.out.println("Extension: " + extension);
             System.out.println("Type     : " + type);
             System.out.println("Size (KB): " + fileSize);
+            System.out.println("Processed : " + classifiedCount);
             System.out.println("----------------------------");
         }
 
