@@ -15,7 +15,7 @@ public class CsvTablePrinter {
         csvRows.add("Omar,35");
 
         // Get header columns
-        String[] header = csvRows.get(0).split(",");
+        String[] header = csvRows.get(0).split(",", -1);
 
         // Print table header
         System.out.printf("%-15s %-10s %-15s%n",
