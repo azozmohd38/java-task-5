@@ -50,6 +50,11 @@ public class CsvTablePrinter {
             // Print row in formatted columns
             System.out.printf("%-15s %-10s %-15s%n", name, age, city);
 
+            if (name.isEmpty() || age.isEmpty() || city.isEmpty()) {
+                System.out.println("Skipping malformed row: " + row);
+                continue;
+            }
+
             rowsShown++;
         }
 
