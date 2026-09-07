@@ -14,6 +14,7 @@ public class FileTypeClassifier {
                 "logo.png",
                 "website.js",
                 "archive.zip",
+                "animation.gif",
                 "README"
         ));
 
