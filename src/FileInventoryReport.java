@@ -30,7 +30,7 @@ public class FileInventoryReport {
         for (String record : records) {
 
             // Split the CSV record
-            String[] parts = record.split(",");
+            String[] parts = record.split(",", -1);
 
             // Check that the record has exactly two fields
             if (parts.length != 2) {
