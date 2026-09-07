@@ -35,7 +35,7 @@ public class CsvTablePrinter {
 
             String row = csvRows.get(i);
 
-            String[] data = row.split(",");
+            String[] data = row.split(",", -1);
 
             // Skip invalid rows
             if (data.length != header.length) {
