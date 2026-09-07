@@ -28,6 +28,12 @@ public class FileNameAnalyzer {
         String baseName = fileName.substring(0, dotIndex).trim();
         String extension = fileName.substring(dotIndex + 1).trim().toLowerCase();
 
+        if (baseName.isEmpty()) {
+            System.out.println("Invalid file name.");
+            input.close();
+            return;
+        }
+
         // Classify the file
         String classification;
 
