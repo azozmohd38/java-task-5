@@ -23,8 +23,9 @@ public class FileTypeClassifier {
         int otherCount = 0;
 
         // Process each file
-        for (String fileName : fileNames) {
+        for (String originalName : fileNames) {
 
+            String fileName = originalName.trim();
             String extension = "";
             String fileType;
 
