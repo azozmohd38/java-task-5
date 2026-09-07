@@ -73,6 +73,7 @@ public class CsvLineParser {
         System.out.println("Age       : " + age);
         System.out.println("City      : " + city);
         System.out.println("Age Group : " + ageGroup);
+        System.out.println("Record parsed successfully.");
 
         input.close();
     }
