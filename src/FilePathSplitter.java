@@ -34,7 +34,7 @@ public class FilePathSplitter {
             fileName = normalizedPath.trim();
         } else {
             folder = normalizedPath.substring(0, lastSlash);
-            fileName = normalizedPath.substring(lastSlash + 1);
+            fileName = normalizedPath.substring(lastSlash + 1).trim();
         }
 
         // Get the file extension
