@@ -36,7 +36,7 @@ public class FileTypeClassifier {
                 fileType = "Other";
             } else {
 
-                extension = fileName.substring(dotIndex + 1).toLowerCase();
+                extension = fileName.substring(dotIndex + 1).trim().toLowerCase();
 
                 switch (extension) {
 
