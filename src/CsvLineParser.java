@@ -28,6 +28,7 @@ public class CsvLineParser {
 
         // Trim each field
         String name = fields[0].trim();
+        boolean nameValid = !name.isEmpty();
         String ageText = fields[1].trim();
         String city = fields[2].trim();
 
