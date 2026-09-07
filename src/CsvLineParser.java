@@ -68,7 +68,8 @@ public class CsvLineParser {
         }
 
         // Display the results
-        System.out.println("\nName      : " + name);
+        System.out.println("\n===== CSV Record =====");
+        System.out.println("Name      : " + name);
         System.out.println("Age       : " + age);
         System.out.println("City      : " + city);
         System.out.println("Age Group : " + ageGroup);
