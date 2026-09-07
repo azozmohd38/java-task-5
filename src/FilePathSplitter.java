@@ -69,6 +69,7 @@ public class FilePathSplitter {
         System.out.println("File Name  : " + fileName);
         System.out.println("Extension  : " + extension);
         System.out.println("Path Style : " + pathStyle);
+        System.out.println("Path split completed.");
 
         input.close();
     }
