@@ -43,11 +43,12 @@ public class CsvTablePrinter {
                 continue;
             }
 
+            String name = data[0].trim();
+            String age = data[1].trim();
+            String city = data[2].trim();
+
             // Print row in formatted columns
-            System.out.printf("%-15s %-10s %-15s%n",
-                    data[0].trim(),
-                    data[1].trim(),
-                    data[2].trim());
+            System.out.printf("%-15s %-10s %-15s%n", name, age, city);
 
             rowsShown++;
         }
