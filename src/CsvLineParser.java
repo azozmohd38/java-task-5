@@ -33,6 +33,12 @@ public class CsvLineParser {
         String city = fields[2].trim();
         boolean cityValid = !city.isEmpty();
 
+        if (!nameValid || !cityValid || ageText.isEmpty()) {
+            System.out.println("Invalid record.");
+            input.close();
+            return;
+        }
+
         // Convert age to integer
         int age;
 
