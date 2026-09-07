@@ -12,7 +12,7 @@ public class CsvTablePrinter {
         csvRows.add("Sara,30,Nizwa");
         csvRows.add("Ahmed,22,Sohar");
         csvRows.add("Fatima,28,Salalah");
-        csvRows.add("Omar,35"); // Wrong number of fields
+        csvRows.add("Omar,35");
 
         // Get header columns
         String[] header = csvRows.get(0).split(",");
