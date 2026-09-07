@@ -10,8 +10,14 @@ public class CsvLineParser {
         System.out.print("Enter record (Name, Age, City): ");
         String record = input.nextLine().trim();
 
+        if (record.isEmpty()) {
+            System.out.println("Invalid record.");
+            input.close();
+            return;
+        }
+
         // Split the record by commas
-        String[] fields = record.split(",");
+        String[] fields = record.split(",", -1);
 
         // Validate the number of fields
         if (fields.length != 3) {
