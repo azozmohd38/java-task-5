@@ -146,5 +146,7 @@ public class FileInventoryReport {
         } else {
             System.out.println("Largest File     : None");
         }
+
+        System.out.println("Inventory report completed.");
     }
 }
