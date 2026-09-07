@@ -26,7 +26,7 @@ public class FileNameAnalyzer {
 
         // Extract base name and extension
         String baseName = fileName.substring(0, dotIndex).trim();
-        String extension = fileName.substring(dotIndex + 1).toLowerCase();
+        String extension = fileName.substring(dotIndex + 1).trim().toLowerCase();
 
         // Classify the file
         String classification;
