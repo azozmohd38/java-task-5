@@ -61,7 +61,7 @@ public class CsvLineParser {
 
         if (age <= 17) {
             ageGroup = "Minor";
-        } else if (age <= 64) {
+        } else if (age >= 18 && age <= 64) {
             ageGroup = "Adult";
         } else {
             ageGroup = "Senior";
