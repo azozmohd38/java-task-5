@@ -8,7 +8,7 @@ public class CsvLineParser {
 
         // Read CSV record
         System.out.print("Enter record (Name, Age, City): ");
-        String record = input.nextLine();
+        String record = input.nextLine().trim();
 
         // Split the record by commas
         String[] fields = record.split(",");
