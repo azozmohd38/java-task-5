@@ -112,6 +112,8 @@ public class FileInventoryReport {
             totalFiles++;
             totalSize += fileSize;
 
+            int classifiedCount = documentCount + imageCount + audioCount + codeCount + otherCount;
+
             // Update largest file
             if (fileSize > largestSize) {
                 largestSize = fileSize;
