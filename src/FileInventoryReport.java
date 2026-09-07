@@ -2,8 +2,17 @@ public class FileInventoryReport {
     public static void main(String[] args) {
 
         // Store CSV file records
-        String[] records = {"photo.png,340", "app.java,8", "song.mp3,5200", "report.pdf,150",
-                "notes.txt,25", "script.py,30", "badrecord", "video.mp4,900", "image.jpg,-50"};
+        String[] records = {
+                "photo.png,340",
+                "app.java,8",
+                "song.mp3,5200",
+                "report.pdf,150",
+                "notes.txt,25",
+                "script.py,30",
+                "badrecord",
+                "video.mp4,900",
+                "image.jpg,-50"
+        };
 
         // Summary variables
         int totalFiles = 0;
