@@ -42,6 +42,11 @@ public class FileInventoryReport {
             String fileName = parts[0].trim();
             String sizeText = parts[1].trim();
 
+            if (fileName.isEmpty() || sizeText.isEmpty()) {
+                System.out.println("Invalid record skipped: " + record);
+                continue;
+            }
+
             int fileSize;
 
             // Convert size to integer
