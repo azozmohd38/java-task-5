@@ -32,7 +32,7 @@ public class FileTypeClassifier {
             int dotIndex = fileName.lastIndexOf('.');
 
             // Check if the file has an extension
-            if (dotIndex == -1 || dotIndex == fileName.length() - 1) {
+            if (dotIndex <= 0 || dotIndex == fileName.length() - 1) {
                 fileType = "Other";
             } else {
 
