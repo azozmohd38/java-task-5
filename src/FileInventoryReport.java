@@ -6,8 +6,6 @@ public class FileInventoryReport {
                 "notes.txt,25", "script.py,30", "badrecord", "video.mp4,900", "image.jpg,-50"};
 
         // Summary variables
-        //Summary variables
-        //Summary variables
         int totalFiles = 0;
         int totalSize = 0;
         int documentCount = 0;
