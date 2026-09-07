@@ -58,7 +58,8 @@ public class CsvTablePrinter {
         }
 
         // Display total rows
-        System.out.println("\nRows Shown: " + rowsShown);
+        System.out.println("\n===== Table Summary =====");
+        System.out.println("Rows Shown: " + rowsShown);
         System.out.println("Rows Skipped: " + (totalDataRows - rowsShown));
     }
 }
