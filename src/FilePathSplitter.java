@@ -70,7 +70,6 @@ public class FilePathSplitter {
         System.out.println("Extension  : " + extension);
         System.out.println("Path Style : " + pathStyle);
 
-        // Close the Scanner
         input.close();
     }
 }
