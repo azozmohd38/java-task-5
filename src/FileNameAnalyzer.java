@@ -14,6 +14,7 @@ public class FileNameAnalyzer {
 
         // Validate file name
         if (fileName.isEmpty() ||
+                fileName.length() < 3 ||
                 dotIndex == -1 ||
                 dotIndex == 0 ||
                 dotIndex == fileName.length() - 1) {
