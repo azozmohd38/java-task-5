@@ -31,7 +31,7 @@ public class FilePathSplitter {
 
         if (lastSlash == -1) {
             folder = "None";
-            fileName = normalizedPath;
+            fileName = normalizedPath.trim();
         } else {
             folder = normalizedPath.substring(0, lastSlash);
             fileName = normalizedPath.substring(lastSlash + 1);
