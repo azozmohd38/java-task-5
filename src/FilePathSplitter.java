@@ -63,7 +63,8 @@ public class FilePathSplitter {
         }
 
         // Display the results
-        System.out.println("\nPath       : " + originalPath);
+        System.out.println("\n===== Path Details =====");
+        System.out.println("Path       : " + originalPath);
         System.out.println("Folder     : " + folder);
         System.out.println("File Name  : " + fileName);
         System.out.println("Extension  : " + extension);
