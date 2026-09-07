@@ -4,7 +4,6 @@ public class FileNameAnalyzer {
 
     public static void main(String[] args) {
 
-        // Create Scanner object
         Scanner input = new Scanner(System.in);
 
         // Read file name from user
@@ -60,7 +59,6 @@ public class FileNameAnalyzer {
         System.out.println("Extension      : " + extension);
         System.out.println("Classification : " + classification);
 
-        // Close Scanner
         input.close();
     }
 }
