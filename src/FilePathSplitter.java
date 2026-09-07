@@ -18,7 +18,7 @@ public class FilePathSplitter {
         }
 
         // Check if the original path contains backslashes
-        boolean isWindowsPath = originalPath.contains("\\");
+        boolean hasBackslash = originalPath.contains("\\");
 
         // Replace backslashes with forward slashes
         String normalizedPath = originalPath.replace('\\', '/');
@@ -49,7 +49,7 @@ public class FilePathSplitter {
 
         // Determine the path style
         String pathStyle;
-        if (isWindowsPath) {
+        if (hasBackslash) {
             pathStyle = "Windows Path";
         } else {
             pathStyle = "Unix Path";
