@@ -26,10 +26,7 @@ public class CsvTablePrinter {
                 firstHeader, secondHeader, thirdHeader);
 
         // Print separator line
-        for (int i = 0; i < 40; i++) {
-            System.out.print("-");
-        }
-        System.out.println();
+        System.out.println("-".repeat(40));
 
         int rowsShown = 0;
 
