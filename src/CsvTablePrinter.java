@@ -29,6 +29,7 @@ public class CsvTablePrinter {
         System.out.println("-".repeat(40));
 
         int rowsShown = 0;
+        int totalDataRows = csvRows.size() - 1;
 
         // Read data rows
         for (int i = 1; i < csvRows.size(); i++) {
