@@ -10,19 +10,18 @@ public class FileNameAnalyzer {
         System.out.print("Enter a file name: ");
         String fileName = input.nextLine().trim();
 
+        int dotIndex = fileName.lastIndexOf('.');
+
         // Validate file name
         if (fileName.isEmpty() ||
-                fileName.lastIndexOf('.') == -1 ||
-                fileName.lastIndexOf('.') == 0 ||
-                fileName.lastIndexOf('.') == fileName.length() - 1) {
+                dotIndex == -1 ||
+                dotIndex == 0 ||
+                dotIndex == fileName.length() - 1) {
 
             System.out.println("Invalid file name.");
             input.close();
             return;
         }
-
-        // Find the last dot position
-        int dotIndex = fileName.lastIndexOf('.');
 
         // Extract base name and extension
         String baseName = fileName.substring(0, dotIndex);
