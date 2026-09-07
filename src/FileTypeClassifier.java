@@ -89,7 +89,8 @@ public class FileTypeClassifier {
 
         // Display summary
         System.out.println("\n========== File Type Summary ==========");
-        System.out.println("Total Files : " + fileNames.size());
+        int totalFiles = fileNames.size();
+        System.out.println("Total Files : " + totalFiles);
         System.out.println("Documents   : " + documentCount);
         System.out.println("Images      : " + imageCount);
         System.out.println("Code Files  : " + codeCount);
