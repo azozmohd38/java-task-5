@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class FileNameAnalyzer {
-
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
