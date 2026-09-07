@@ -48,7 +48,7 @@ public class FilePathSplitter {
         int lastDot = fileName.lastIndexOf('.');
         boolean hasExtension = lastDot > 0 && lastDot < fileName.length() - 1;
 
-        if (lastDot == -1 || lastDot == fileName.length() - 1) {
+        if (!hasExtension) {
             extension = "none";
         } else {
             extension = fileName.substring(lastDot + 1).toLowerCase();
