@@ -5,7 +5,6 @@ public class FileTypeClassifier {
 
     public static void main(String[] args) {
 
-        // Create a list of file names
         List<String> fileNames = new ArrayList<>();
 
         fileNames.add("report.pdf");
@@ -18,7 +17,6 @@ public class FileTypeClassifier {
         fileNames.add("archive.zip");
         fileNames.add("README"); // No extension
 
-        // Counters
         int documentCount = 0;
         int imageCount = 0;
         int codeCount = 0;
