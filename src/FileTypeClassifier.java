@@ -83,7 +83,8 @@ public class FileTypeClassifier {
             }
 
             // Display file classification
-            System.out.println(fileName + " -> " + fileType);
+            System.out.println(fileName + " -> " + fileType
+                    + (extension.isEmpty() ? "" : " (" + extension + ")"));
         }
 
         // Display summary
