@@ -31,6 +31,7 @@ public class CsvLineParser {
         boolean nameValid = !name.isEmpty();
         String ageText = fields[1].trim();
         String city = fields[2].trim();
+        boolean cityValid = !city.isEmpty();
 
         // Convert age to integer
         int age;
