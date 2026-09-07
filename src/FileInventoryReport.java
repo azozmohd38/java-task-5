@@ -67,7 +67,7 @@ public class FileInventoryReport {
             String extension = "";
             int dotIndex = fileName.lastIndexOf('.');
 
-            if (dotIndex != -1 && dotIndex < fileName.length() - 1) {
+            if (dotIndex > 0 && dotIndex < fileName.length() - 1) {
                 extension = fileName.substring(dotIndex + 1).toLowerCase();
             }
 
