@@ -5,7 +5,6 @@ public class CsvTablePrinter {
 
     public static void main(String[] args) {
 
-        // Store CSV rows
         List<String> csvRows = new ArrayList<>();
 
         csvRows.add("Name,Age,City");
