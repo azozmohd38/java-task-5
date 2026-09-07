@@ -95,5 +95,6 @@ public class FileTypeClassifier {
         System.out.println("Images      : " + imageCount);
         System.out.println("Code Files  : " + codeCount);
         System.out.println("Other Files : " + otherCount);
+        System.out.println("Classified  : " + (documentCount + imageCount + codeCount + otherCount));
     }
 }
