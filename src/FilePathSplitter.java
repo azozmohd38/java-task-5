@@ -8,20 +8,20 @@ public class FilePathSplitter {
 
         // Read the full file path
         System.out.print("Enter a file path: ");
-        String path = input.nextLine().trim();
+        String originalPath = input.nextLine().trim();
 
         // Check if the path is blank
-        if (path.isEmpty()) {
+        if (originalPath.isEmpty()) {
             System.out.println("Invalid path.");
             input.close();
             return;
         }
 
         // Check if the original path contains backslashes
-        boolean isWindowsPath = path.contains("\\");
+        boolean isWindowsPath = originalPath.contains("\\");
 
         // Replace backslashes with forward slashes
-        String normalizedPath = path.replace('\\', '/');
+        String normalizedPath = originalPath.replace('\\', '/');
 
         // Find the last slash
         int lastSlash = normalizedPath.lastIndexOf('/');
@@ -56,7 +56,7 @@ public class FilePathSplitter {
         }
 
         // Display the results
-        System.out.println("\nPath       : " + path);
+        System.out.println("\nPath       : " + originalPath);
         System.out.println("Folder     : " + folder);
         System.out.println("File Name  : " + fileName);
         System.out.println("Extension  : " + extension);
