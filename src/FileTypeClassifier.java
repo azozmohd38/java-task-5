@@ -5,17 +5,17 @@ public class FileTypeClassifier {
 
     public static void main(String[] args) {
 
-        List<String> fileNames = new ArrayList<>();
-
-        fileNames.add("report.pdf");
-        fileNames.add("photo.jpg");
-        fileNames.add("program.java");
-        fileNames.add("notes.txt");
-        fileNames.add("script.py");
-        fileNames.add("logo.png");
-        fileNames.add("website.js");
-        fileNames.add("archive.zip");
-        fileNames.add("README"); // No extension
+        List<String> fileNames = new ArrayList<>(List.of(
+                "report.pdf",
+                "photo.jpg",
+                "program.java",
+                "notes.txt",
+                "script.py",
+                "logo.png",
+                "website.js",
+                "archive.zip",
+                "README"
+        ));
 
         int documentCount = 0;
         int imageCount = 0;
